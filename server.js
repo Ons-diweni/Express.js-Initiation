@@ -1,5 +1,6 @@
 //configuration de notre serveur http
 
+//cette methode est utilisée pour charger les variables d'environnement à partir du fichier .env et les stocker dans l'objet process.env
 require('dotenv').config()
 
 
