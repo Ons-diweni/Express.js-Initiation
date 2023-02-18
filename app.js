@@ -1,8 +1,7 @@
 /**
- *  App.js c'est point d'entrée de l'application , il contient la configuration de base de l'application, 
- * y compris les importations de modules nécessaires pour l'application et la gestion des routes.
+ *  App.js c'est le point d'entrée de l'application , il contient la configuration de base de l'application, 
+ * y compris les importations des modules nécessaires pour l'application et la gestion des routes.
  */
-
 
 //Importation  des modules requis pour ce projet
 var createError = require('http-errors');
@@ -12,39 +11,25 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 
-//création d'une instance d'application Express
+//La méthode express() crée une nouvelle instance d'application Express
+//l'instance app peut être considérée comme une pile de fonctions middleware qui peuvent intercepter et traiter les requêtes HTTP 
+//avant de les transmettre à la fonction de gestionnaire de route appropriée.
 var app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
 
-
-//Configuration des routes
+//Configuration des routes .
+//charge le module ./routes/index.js qui peut contenir un ensemble de routes 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 
-//application-level middelware : intercept request with path "/"
+//Enregistrer les routes définies dans indexRouter comme routes de niveau supérieur pour l'application
 app.use('/', indexRouter);
-
-//application-level middelware : intercept request with path "/users"
-/* app.use('/users', usersRouter); */
+//intercept requests with path begin with "/users"
 app.use('/users', usersRouter);
 
 
-
-/* var myLogger = function(req, res, next) {
-    console.log('LOGGED');
-    next();
-};
-
-//application-level middelware : intercept any request since there is no path is defined
-app.use(myLogger);
- */
-
-
-//application-level middelware with no mount path : intercept any request since there is no path is defined
+//these application-level middelwares with no mount path : intercept any request since there is no path is defined.
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
