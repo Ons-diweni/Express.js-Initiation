@@ -1,18 +1,13 @@
-![](https://img.shields.io/badge/Node.js_16-gray?style=for-the-badge)
-![](https://img.shields.io/badge/Framework_Express.js_4-grey?style=for-the-badge)
-![](https://img.shields.io/badge/NPM_-_Node_Package_Manager-tan?style=for-the-badge)
+![](https://img.shields.io/badge/Node.js_16-blueviolet?style=for-the-badge)
+![](https://img.shields.io/badge/Framework_Express.js_4-yellow?style=for-the-badge)
+![](https://img.shields.io/badge/NPM_-_Node_Package_Manager-blue?style=for-the-badge)
+# $\mathcal{\color{purple}{Crèation \ d'une \ application \ Express.js-Node.js } \ \}$
+
+## $\ \ \textcolor{darkgray}{Quelques \ notions \ de \ bases :}$
+### $\ \ \textcolor{DarkSlateBlue}{Pour \ la \ mise \ en  \ place \ du \ projet }$
 
 
-## $\mathcal{\color{DarkSeaGreen}{𝑪𝒓é𝒂𝒕𝒊𝒐𝒏 \ 𝒅'𝒖𝒏𝒆 \ 𝒂𝒑𝒑𝒍𝒊𝒄𝒂𝒕𝒊𝒐𝒏 \ 𝑬𝒙𝒑𝒓𝒆𝒔𝒔.𝒋𝒔} \ \}$ $\mathcal{\color{DarkSeaGreen}{ 𝒔𝒖𝒓 \ 𝒍𝒆 \ 𝒔𝒆𝒓𝒗𝒆𝒖𝒓 \ 𝑵𝒐𝒅𝒆.𝒋𝒔 } \ \}$
-## $\ \ \textcolor{tan}{𝑵𝒐𝒕𝒊𝒐𝒏𝒔 \ 𝒅𝒆 \ 𝒃𝒂𝒔𝒆 }$ 
+- $\ \ \textcolor{SlateBlue}{Node.js }$ : Node.js est un environnement d'exécution coté serveur pour JavaScripts construit sur le moteur (l'interpreteur) JavaScript V8 de Google ,il dispose également d'un écosystème de modules , de packages et d'outils open-source qui simplifient le processus de développement d'applications Node.js
+- $\ \ \textcolor{SlateBlue}{Express.js}$ : Express.js est un framework (cadre de travail) pour construire des applications web basées sur Node.js 
+- $\ \ \textcolor{SlateBlue}{ NPM \ Node \ Package \ Manager }$ : npm est le gestionnaire de paquets par dèfaut pour l'environnement d'exécution JavaScript Node.js, npm se compose d'un client en ligne de commande , également appelé npm , et d'une base de données en ligne de paquets publics et privés payants .
 
-### • $\ \ \textcolor{gray}{𝐍𝐨𝐝𝐞.𝐣𝐬}$ : 
-𝑵𝒐𝒅𝒆.𝒋𝒔 𝒆𝒔𝒕 𝒖𝒏 𝒆𝒏𝒗𝒊𝒓𝒐𝒏𝒏𝒆𝒎𝒆𝒏𝒕 𝒅'𝒆𝒙é𝒄𝒖𝒕𝒊𝒐𝒏 𝒄ô𝒕é 𝒔𝒆𝒓𝒗𝒆𝒖𝒓 𝒑𝒐𝒖𝒓 𝑱𝒂𝒗𝒂𝑺𝒄𝒓𝒊𝒑𝒕𝒔 𝒄𝒐𝒏𝒔𝒕𝒓𝒖𝒊𝒕 𝒔𝒖𝒓 𝒍𝒆 𝒎𝒐𝒕𝒆𝒖𝒓 (𝒍'𝒊𝒏𝒕𝒆𝒓𝒑𝒓é𝒕𝒆𝒖𝒓) 𝑱𝒂𝒗𝒂𝑺𝒄𝒓𝒊𝒑𝒕 𝑽8 𝒅𝒆 𝑮𝒐𝒐𝒈𝒍𝒆 𝑵𝒐𝒅𝒆.𝒋𝒔 𝒑𝒆𝒓𝒎𝒆𝒕 𝒂𝒖𝒙 𝒅é𝒗𝒆𝒍𝒐𝒑𝒑𝒆𝒖𝒓𝒔 𝒅'é𝒄𝒓𝒊𝒓𝒆 𝒅𝒆𝒔 𝒂𝒑𝒑𝒍𝒊𝒄𝒂𝒕𝒊𝒐𝒏𝒔 𝒄ô𝒕é 𝒔𝒆𝒓𝒗𝒆𝒖𝒓 𝒆𝒏 𝑱𝒂𝒗𝒂𝑺𝒄𝒓𝒊𝒑𝒕 
-𝑰𝒍 𝒅𝒊𝒔𝒑𝒐𝒔𝒆 é𝒈𝒂𝒍𝒆𝒎𝒆𝒏𝒕 𝒅'𝒖𝒏 é𝒄𝒐𝒔𝒚𝒔𝒕è𝒎𝒆 𝒅𝒆 𝒎𝒐𝒅𝒖𝒍𝒆𝒔, 𝒅𝒆 𝒑𝒂𝒄𝒌𝒂𝒈𝒆𝒔 𝒆𝒕 𝒅'𝒐𝒖𝒕𝒊𝒍𝒔 𝒐𝒑𝒆𝒏-𝒔𝒐𝒖𝒓𝒄𝒆 𝒒𝒖𝒊 𝒔𝒊𝒎𝒑𝒍𝒊𝒇𝒊𝒆𝒏𝒕 𝒍𝒆 𝒑𝒓𝒐𝒄𝒆𝒔𝒔𝒖𝒔 𝒅𝒆 𝒅é𝒗𝒆𝒍𝒐𝒑𝒑𝒆𝒎𝒆𝒏𝒕 𝒅'𝒂𝒑𝒑𝒍𝒊𝒄𝒂𝒕𝒊𝒐𝒏𝒔 𝑵𝒐𝒅𝒆.𝒋𝒔  
-
-### • $\ \ \textcolor{gray}{𝐄𝐱𝐩𝐫𝐞𝐬𝐬.𝐣𝐬}$ :
-𝑬𝒙𝒑𝒓𝒆𝒔𝒔.𝒋𝒔 𝒆𝒔𝒕 𝒖𝒏 𝒇𝒓𝒂𝒎𝒆𝒘𝒐𝒓𝒌 (𝒄𝒂𝒅𝒓𝒆 𝒅𝒆 𝒕𝒓𝒂𝒗𝒂𝒊𝒍) 𝒑𝒐𝒖𝒓 𝒄𝒐𝒏𝒔𝒕𝒓𝒖𝒊𝒓𝒆 𝒅𝒆𝒔 𝒂𝒑𝒑𝒍𝒊𝒄𝒂𝒕𝒊𝒐𝒏𝒔 𝒘𝒆𝒃 𝒃𝒂𝒔é𝒆𝒔 𝒔𝒖𝒓 𝑵𝒐𝒅𝒆.𝒋𝒔
-
-#### • $\ \ \textcolor{gray}{𝐍𝐏𝐌 - 𝐍𝐨𝐝𝐞 \ 𝐏𝐚𝐜𝐤𝐚𝐠𝐞 \ 𝐌𝐚𝐧𝐚𝐠𝐞𝐫}$ :
-𝒏𝒑𝒎 𝒆𝒔𝒕 𝒍𝒆 𝒈𝒆𝒔𝒕𝒊𝒐𝒏𝒏𝒂𝒊𝒓𝒆 𝒅𝒆 𝒑𝒂𝒒𝒖𝒆𝒕𝒔 𝒑𝒂𝒓 𝒅é𝒇𝒂𝒖𝒕 𝒑𝒐𝒖𝒓 𝒍'𝒆𝒏𝒗𝒊𝒓𝒐𝒏𝒏𝒆𝒎𝒆𝒏𝒕 𝒅'𝒆𝒙é𝒄𝒖𝒕𝒊𝒐𝒏 𝑱𝒂𝒗𝒂𝑺𝒄𝒓𝒊𝒑𝒕 𝑵𝒐𝒅𝒆.𝒋𝒔,
-𝒏𝒑𝒎 𝒔𝒆 𝒄𝒐𝒎𝒑𝒐𝒔𝒆 𝒅'𝒖𝒏 𝒄𝒍𝒊𝒆𝒏𝒕 𝒆𝒏 𝒍𝒊𝒈𝒏𝒆 𝒅𝒆 𝒄𝒐𝒎𝒎𝒂𝒏𝒅𝒆, é𝒈𝒂𝒍𝒆𝒎𝒆𝒏𝒕 𝒂𝒑𝒑𝒆𝒍é 𝒏𝒑𝒎, 𝒆𝒕 𝒅'𝒖𝒏𝒆 𝒃𝒂𝒔𝒆 𝒅𝒆 𝒅𝒐𝒏𝒏é𝒆𝒔 𝒆𝒏 𝒍𝒊𝒈𝒏𝒆 𝒅𝒆 𝒑𝒂𝒒𝒖𝒆𝒕𝒔 𝒑𝒖𝒃𝒍𝒊𝒄𝒔 𝒆𝒕 𝒑𝒓𝒊𝒗é𝒔 𝒑𝒂𝒚𝒂𝒏𝒕𝒔.
