@@ -16,7 +16,25 @@ var logger = require('morgan');
 //avant de les transmettre à la fonction de gestionnaire de route appropriée.
 var app = express();
 
-app.use('/ons', (req, res, next) => { res.send("onnns asslemaa") })
+
+//
+app.use((req, res, next) => {
+    //permettra à toutes les demandes de toutes les origines d'accéder à votre API
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
+    //dèfinir les méthodes http acceptèes par le serveur
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+    next();
+});
+
+
+//these application-level middelwares with no mount path : intercept any request since there is no path is defined.
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 //Configuration des routes .
 //charge le module ./routes/index.js qui peut contenir un ensemble de routes 
@@ -32,18 +50,25 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 
-//these application-level middelwares with no mount path : intercept any request since there is no path is defined.
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+
+
+
+app.use('/staff', (req, res, next) => {
+    const staff = [{ nom: 'Ons', prenom: 'Diweni', age: 25 }, { nom: 'Houssem', prenom: 'GHallabi', age: 35 }]
+    res.json(staff)
+
+})
+
+
+
+
 
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     next(createError(404));
 });
+
 
 // error handler
 app.use(function(err, req, res, next) {
@@ -55,5 +80,7 @@ app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.render('error');
 });
+
+
 
 module.exports = app;

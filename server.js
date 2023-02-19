@@ -46,8 +46,17 @@ const port = normalizePort(process.env.PORT || 3000);
 //initialiser la proprièté port de l'objet app 
 app.set('port', port);
 
-//creation du serveur à l'aide du module http
+//creation du serveur à l'aide du module http 
 const server = http.createServer(app)
 
+//Configuration de deux evénements error et listening 
+server.on('error', errorHandler);
+server.on('listening', () => {
+    //La méthode server.address() est utilisée pour récupérer l'adresse IP et le numéro de port sur lequel le serveur est en train d'écouter.
+    const address = server.address();
+    const bind = typeof address === 'string' ? 'pipe ' + address : 'port ' + port;
+    console.log('Listening on ' + bind);
+});
+
 //Lancer le serveur
-server.listen(port, () => console.log(`server run with port ${port} in the host ${process.env.HOSTNAME}`))
+server.listen(port)
