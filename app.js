@@ -16,14 +16,17 @@ var logger = require('morgan');
 //avant de les transmettre à la fonction de gestionnaire de route appropriée.
 var app = express();
 
+app.use('/ons', (req, res, next) => { res.send("onnns asslemaa") })
 
 //Configuration des routes .
 //charge le module ./routes/index.js qui peut contenir un ensemble de routes 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-
-//Enregistrer les routes définies dans indexRouter comme routes de niveau supérieur pour l'application
+//app.use([path,] callback) est une méthode Express utilisée pour spécifier une fonction middleware qui sera exécutée pour toutes les requêtes entrantes avant qu 'elles n'atteignent leur route correspondante.
+//path est une chaîne de caractères optionnelle qui représente le chemin d'accès sur lequel le middleware doit être exécuté. 
+//Si aucune valeur n'est fournie pour path, le middleware sera exécuté pour toutes les requêtes entrantes.
+//Dans cette ligne elle est utilisé pour enregistrer les routes définies dans indexRouter comme routes de niveau supérieur pour l'application
 app.use('/', indexRouter);
 //intercept requests with path begin with "/users"
 app.use('/users', usersRouter);
@@ -35,7 +38,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
 
 
 // catch 404 and forward to error handler
