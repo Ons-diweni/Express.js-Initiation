@@ -9,14 +9,18 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+//Le package Mongoose facilite les interactions entre votre Api Express et votre base de données MongoDB.
 var mongoose = require('mongoose')
 var dbConfig = require('./dbConfig.json')
+
+//************************************************************************************************************************************* */
 
 //La méthode express() crée une nouvelle instance d'application Express
 //l'instance app peut être considérée comme une pile de fonctions middleware qui peuvent intercepter et traiter les requêtes HTTP 
 //avant de les transmettre à la fonction de gestionnaire de route appropriée.
 var app = express();
 
+//*************************************************************************************************************************************** */
 
 //DataBase configuration 
 //se connecter à une base de données MongoDB hébergée dans le cloud sur la plate-forme MongoDB Atlas.
@@ -25,8 +29,9 @@ mongoose.connect(dbConfig.url, {
         useUnifiedTopology: true
     })
     .then(() => console.log('Connexion à MongoDB réussie !'))
-    .catch(() => console.log('Connexion à MongoDB échouée !'));
+    .catch((err) => console.log('Connexion à MongoDB échouée !' + err));
 
+//************************************************************************************************** ***************************************/  
 
 //Cors configuration 
 app.use((req, res, next) => {
@@ -38,7 +43,7 @@ app.use((req, res, next) => {
     next();
 });
 
-
+//************************************************************************************************** **********************************/
 //these application-level middelwares with no mount path : intercept any request since there is no path is defined.
 app.use(logger('dev'));
 //Avec ceci, Express prend toutes les requêtes qui ont comme Content-Type  application/json 
@@ -49,6 +54,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
+//********************************************************************************************************************************** */
 //Configuration des routes :
 //charge le module ./routes/index.js qui peut contenir un ensemble de routes 
 var indexRouter = require('./routes/index');
@@ -66,16 +72,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 
-
-
-
-/* app.use('/staff', (req, res, next) => {
-    const staff = [{ nom: 'Ons', prenom: 'Diweni', age: 25 }, { nom: 'Houssem', prenom: 'GHallabi', age: 35 }]
-    res.json(staff)
-
-}) */
-
-
+//************************************************************************************************************************************* */
 app.post('/add', (req, res, next) => {
     console.log(req.body)
     res.status(201).json({
@@ -85,8 +82,7 @@ app.post('/add', (req, res, next) => {
 
 
 
-
-
+//************************************************************************************************************************************* */
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
