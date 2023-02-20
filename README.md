@@ -4,8 +4,6 @@
 # $\mathcal{\color{purple}{Crèation \ d'une \ application \ Express.js-Node.js } \ \}$
 
 ## $\ \ \textcolor{darkgray}{Quelques \ notions \ de \ bases :}$
-### $\ \ \textcolor{DarkSlateBlue}{Pour \ la \ mise \ en  \ place \ du \ projet }$
-
 
 - $\ \ \textcolor{SlateBlue}{Node.js }$ : Node.js est un environnement d'exécution coté serveur pour JavaScripts construit sur le moteur (l'interpreteur) JavaScript V8 de Google ,il dispose également d'un écosystème de modules , de packages et d'outils open-source qui simplifient le processus de développement d'applications Node.js
 - $\ \ \textcolor{SlateBlue}{Express.js}$ : Express.js est un framework (cadre de travail) pour construire des applications web basées sur Node.js 
