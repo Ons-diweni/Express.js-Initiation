@@ -1,8 +1,7 @@
 ![](https://img.shields.io/badge/Node.js_16-blueviolet?style=for-the-badge)
-![](https://img.shields.io/badge/Framework_Express.js_4-yellow?style=for-the-badge)
+![](https://img.shields.io/badge/Framework_Express.js_4-blueviolet?style=for-the-badge)
 ![](https://img.shields.io/badge/NPM_-_Node_Package_Manager-blue?style=for-the-badge)
 # $\mathcal{{Crèation \ d'une \ application \ Express.js-Node.js } \ \}$
-
 ## $\ \{Quelques \ notions \ de \ bases :}$
 
 - __Node.js__ :  un environnement d'exécution JavaScript coté serveur construit sur le moteur/l'interpreteur JavaScript V8 de Google ,il dispose également d'un écosystème de modules , de packages et d'outils open-source qui simplifient le processus de développement d'applications Node.js.
